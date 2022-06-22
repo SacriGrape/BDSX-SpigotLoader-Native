@@ -1,13 +1,12 @@
-﻿  Source.cpp
-C:\Users\evan6\source\repos\TestThing\TestThing\Source.cpp(31,2): warning C4190: 'playerGetXuid' has C-linkage specified, but returns UDT 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' which is incompatible with C
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4919): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Users\evan6\source\repos\TestThing\TestThing\Source.cpp(37,2): warning C4190: 'actorGetNameTag' has C-linkage specified, but returns UDT 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' which is incompatible with C
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4919): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+﻿  java.cpp
+C:\Users\evan6\source\repos\TestThing\TestThing\java.cpp(6,17): warning C4101: 'vm_args': unreferenced local variable
+C:\Users\evan6\source\repos\TestThing\TestThing\java.cpp(4,10): warning C4101: 'jvm': unreferenced local variable
+C:\Users\evan6\source\repos\TestThing\TestThing\java.cpp(5,10): warning C4101: 'env': unreferenced local variable
      Creating library C:\Users\evan6\source\repos\TestThing\x64\Release\TestThing.lib and object C:\Users\evan6\source\repos\TestThing\x64\Release\TestThing.exp
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
 LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  1 of 355 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+C:\Users\evan6\source\repos\TestThing\TestThing\Hooks.cpp(13): warning C4172: returning address of local variable or temporary: name
+  All 355 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   TestThing.vcxproj -> C:\Users\evan6\source\repos\TestThing\x64\Release\TestThing.dll

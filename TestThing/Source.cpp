@@ -29,7 +29,6 @@ extern "C"
 
 	__declspec(dllexport) std::string playerGetXuid(Player* player)
 	{
-		std::cout << (__int64)player << std::endl;
 		return getXuid(player);
 	}
 
@@ -43,9 +42,8 @@ extern "C"
 		return getRotation(player);
 	}
 
-	__declspec(dllexport) void testFunction(Player* player, std::string testString) 
+	__declspec(dllexport) void testFunction(Player* player) 
 	{
-		std::cout << testString << "\n";
-		//std::cout << (__int64)player << "\n";
+		std::cout << (__int64)player << "\n";
 	}
 }

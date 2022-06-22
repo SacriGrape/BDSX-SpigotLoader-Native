@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 
-class Player {};
 class Actor {};
+class Player {};
 class Block {};
 
 typedef float(*Player_getSpeed)(void*);
@@ -12,6 +12,7 @@ typedef bool(*Player_canDestroy)(Player*, Block*);
 typedef void* (*Actor_getRotation)(void*);
 
 extern "C" __declspec(dllexport) void initFunctions();
+void* getFunctionAddress(std::string symbol);
 
 extern Player_getSpeed getSpeed;
 //extern Player_getXuid getXuid;
