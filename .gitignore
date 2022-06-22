@@ -19,6 +19,7 @@
 *.so
 *.dylib
 *.dll
+!TestThing/DLL/*.dll
 
 # Fortran module files
 *.mod
@@ -29,6 +30,7 @@
 *.la
 *.a
 *.lib
+!TestThing/DLL/*.lib
 
 # Executables
 *.exe
@@ -437,5 +439,5 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,c++
 
 x64/
-.vs
+.vs/
 TestThing/x64
