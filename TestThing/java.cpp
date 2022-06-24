@@ -1,10 +1,22 @@
-#include <jni.h>       /* where everything is defined */
+#include <windows.h>
+#include <iostream>
 
-void initJavaStuff() {
-	JavaVM* jvm;       /* denotes a Java VM */
-	JNIEnv* env;       /* pointer to native method interface */
-	JavaVMInitArgs vm_args; /* JDK/JRE 10 VM initialization arguments */
+#include "java.h"
 
-	JavaVMOption* options = new JavaVMOption[1];
-	options[0].optionString = (char*)"-Djava.class.path=/usr/lib/java";
+void initJava()
+{
+	SetDllDirectoryA("../SpigotLoader/jre/bin");
+
+	JavaVM* jvm;
+	JNIEnv* env;
+	JavaVMInitArgs vm_args;
+
+	vm_args.version = JNI_VERSION_10;
+	vm_args.nOptions = 0;
+	vm_args.ignoreUnrecognized = false;
+	JNI_CreateJavaVM(&jvm, (void**)&env, &vm_args);
+	
+	jclass urlClass = env->FindClass("java/net/URL");
+	jmethodID urlConstructor = env->GetMethodID(urlClass, "<init>", "(Ljava/lang/String;)Ljava/net/URL;");
+	jobject URL = env->NewObject(urlClass, urlConstructor, env->NewStringUTF("https://google.com"));
 }

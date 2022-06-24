@@ -1,6 +1,7 @@
 #include "Utils.h"
 #include "functions.h"
 #include "Hooks.h"
+#include "java.h"
 
 #include <iostream>
 
@@ -16,6 +17,9 @@ extern "C" __declspec(dllexport) void init(std::string cachePath)
 
 	// Initiates Hooks
 	initHooks();
+
+	// Initiates the JVM and class loader
+	initJava();
 
 	std::cout << "[Spigot Loader] Intilized!!!" << "\n";
 }

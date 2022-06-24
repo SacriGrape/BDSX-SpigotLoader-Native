@@ -47,6 +47,9 @@
     <ClInclude Include="Hooks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="java.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="DLL\libMinHook.x64.lib">

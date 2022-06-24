@@ -137,6 +137,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jvm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -149,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="DLL\MinHook.h" />
     <ClInclude Include="functions.h" />
+    <ClInclude Include="java.h" />
     <ClInclude Include="Hooks.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
